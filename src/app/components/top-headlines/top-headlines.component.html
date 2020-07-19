@@ -1,11 +1,11 @@
 <div>
     <h1>Top 10 U.S. Headlines</h1>
-    <div *ngFor="let topHeadline of topHeadlines.articles; let i = index" class="item">
+    <div *ngFor="let topHeadline of topHeadlines.articles; let i = index" class="item card">
         <!-- TODO: Make URL work -->
         <div class="number">
             <h2>{{ i + 1}} </h2>
         </div>
-        <div>
+        <div class="container">
             <a (routerLink)="topHeadline.url"> {{ topHeadline.title }} </a>
             <!-- <li> {{ topHeadline.source.name }} </li> -->
             <p class="author"> {{ topHeadline.author }} </p>

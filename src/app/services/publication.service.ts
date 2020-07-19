@@ -8,8 +8,8 @@ import { Publications } from '../models/Publications';
   providedIn: 'root'
 })
 export class PublicationService {
-  publicationsUrl: string = 'https://newsapi.org/v2/sources?';
-  apiKey: string = 'apiKey=9df8bb14cfe44cdcad36293aa49cd7f2';
+  publicationsUrl: string = 'https://newsapi.org/v2/sources?language=en';
+  apiKey: string = '&apiKey=9df8bb14cfe44cdcad36293aa49cd7f2';
 
   constructor(private http:HttpClient) { }
 
