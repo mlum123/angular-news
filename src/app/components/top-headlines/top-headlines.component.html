@@ -1,0 +1,10 @@
+<ul *ngFor="let topHeadline of topHeadlines[0].articles">
+    <li> {{ topHeadline.title }} </li>
+    <ul>
+        <li> {{ topHeadline.source.name }} </li>
+        <li> {{ topHeadline.author }} </li>
+        <li> {{ topHeadline.description }} </li>
+        <!-- TODO: Make URL work -->
+        <!-- <li><a (routerLink)="topHeadline.url"></a></li> -->
+    </ul>
+</ul>
