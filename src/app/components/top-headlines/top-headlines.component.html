@@ -1,10 +1,15 @@
-<h2>Top 10 U.S. Headlines</h2>
-<ul *ngFor="let topHeadline of topHeadlines.articles">
-    <!-- TODO: Make URL work -->
-    <li> <a (routerLink)="topHeadline.url"> {{ topHeadline.title }} </a></li>
-    <ul>
-        <!-- <li> {{ topHeadline.source.name }} </li> -->
-        <li> {{ topHeadline.author }} </li>
-        <li> {{ topHeadline.description }} </li>
-    </ul>
-</ul>
+<div>
+    <h1>Top 10 U.S. Headlines</h1>
+    <div *ngFor="let topHeadline of topHeadlines.articles; let i = index" class="item">
+        <!-- TODO: Make URL work -->
+        <div class="number">
+            <h2>{{ i + 1}} </h2>
+        </div>
+        <div>
+            <a (routerLink)="topHeadline.url"> {{ topHeadline.title }} </a>
+            <!-- <li> {{ topHeadline.source.name }} </li> -->
+            <p class="author"> {{ topHeadline.author }} </p>
+            <p class="description"> {{ topHeadline.description }} </p>
+        </div>
+    </div>
+</div>

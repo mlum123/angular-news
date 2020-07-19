@@ -1,10 +1,9 @@
-<h2>Trusted Publications</h2>
-<ul *ngFor="let topHeadline of publications.sources">
-    <!-- TODO: Make URL work -->
-    <li> <a (routerLink)="topHeadline.url"> {{ topHeadline.name }} </a></li>
-    <ul>
+<h1>Research Publications</h1>
+<div *ngFor="let topHeadline of publications.sources" class="card">
+    <div class="container">
+        <!-- TODO: Make URL work -->
+        <h4> <a (routerLink)="topHeadline.url"> {{ topHeadline.name }}</a> ({{ topHeadline.language }})</h4>
         <!-- <li> {{ topHeadline.source.name }} </li> -->
-        <li> {{ topHeadline.description }} </li>
-        <li> {{ topHeadline.country }} </li>
-    </ul>
-</ul>
+        <p> {{ topHeadline.description }} </p>
+    </div>
+</div>

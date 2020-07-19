@@ -1,0 +1,16 @@
+input {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    padding: 10px;
+}
+
+.text {
+    width: 670px;
+}
+
+.btn {
+    border: none;
+    background-color: #5c5954;
+    color: white;
+    margin-left: 10px;
+    border-radius: 4px;
+}

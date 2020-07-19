@@ -1,7 +1,7 @@
-<h2>Search For an Article Topic</h2>
+<h1>Search For an Article Topic</h1>
 <form class="form" (ngSubmit)="onSubmit(keyword)">
     <input type="text" name="keyword" [(ngModel)]="keyword"
-    placeholder="Search for an article topic...">
+    placeholder="Search for an article topic..." class="text">
     <input type="submit" value="Submit" class="btn">
 </form>
 <ul *ngFor="let topHeadline of keywordArticles.articles">

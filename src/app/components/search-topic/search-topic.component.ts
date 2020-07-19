@@ -9,7 +9,7 @@ import { SearchTopicService } from '../../services/search-topic.service';
 })
 export class SearchTopicComponent implements OnInit {
   keyword: string;
-  keywordArticles:TopHeadlines;
+  keywordArticles:TopHeadlines = new TopHeadlines();
 
   constructor(private searchTopicService: SearchTopicService) { }
 
