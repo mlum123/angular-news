@@ -15,7 +15,6 @@ export class TopHeadlinesComponent implements OnInit {
   ngOnInit(): void {
     this.topHeadlineService.getTopHeadlines().subscribe(topHeadlines => {
       this.topHeadlines = topHeadlines;
-      console.log(topHeadlines);
     });
   }
 

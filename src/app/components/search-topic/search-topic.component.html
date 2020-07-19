@@ -1,0 +1,15 @@
+<h2>Search For an Article Topic</h2>
+<form class="form" (ngSubmit)="onSubmit(keyword)">
+    <input type="text" name="keyword" [(ngModel)]="keyword"
+    placeholder="Search for an article topic...">
+    <input type="submit" value="Submit" class="btn">
+</form>
+<ul *ngFor="let topHeadline of keywordArticles.articles">
+    <!-- TODO: Make URL work -->
+    <li> <a (routerLink)="topHeadline.url"> {{ topHeadline.title }} </a></li>
+    <ul>
+        <!-- <li> {{ topHeadline.source.name }} </li> -->
+        <li> {{ topHeadline.author }} </li>
+        <li> {{ topHeadline.description }} </li>
+    </ul>
+</ul>

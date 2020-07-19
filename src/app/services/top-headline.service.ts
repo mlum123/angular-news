@@ -16,6 +16,6 @@ export class TopHeadlineService {
   constructor(private http:HttpClient) { }
 
   getTopHeadlines():Observable<TopHeadlines> {
-    return this.http.get<TopHeadlines>(`${this.topHeadlinesUrl}${this.country}${this.apiKey}${this.headlinesLimit}`)
+    return this.http.get<TopHeadlines>(`${this.topHeadlinesUrl}${this.country}${this.apiKey}${this.headlinesLimit}`);
   }
 }
