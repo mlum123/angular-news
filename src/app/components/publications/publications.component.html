@@ -1,1 +1,10 @@
 <h2>Trusted Publications</h2>
+<ul *ngFor="let topHeadline of publications.sources">
+    <!-- TODO: Make URL work -->
+    <li> <a (routerLink)="topHeadline.url"> {{ topHeadline.name }} </a></li>
+    <ul>
+        <!-- <li> {{ topHeadline.source.name }} </li> -->
+        <li> {{ topHeadline.description }} </li>
+        <li> {{ topHeadline.country }} </li>
+    </ul>
+</ul>

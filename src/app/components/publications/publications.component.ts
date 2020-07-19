@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PublicationService } from '../../services/publication.service';
 import { Publications } from '../../models/Publications';
 
 @Component({
@@ -7,10 +8,15 @@ import { Publications } from '../../models/Publications';
   styleUrls: ['./publications.component.css']
 })
 export class PublicationsComponent implements OnInit {
+  publications:Publications;
 
-  constructor() { }
+  constructor(private publicationService:PublicationService) { }
 
   ngOnInit(): void {
+    this.publicationService.getPublications().subscribe(publications => {
+      this.publications = publications;
+      console.log(this.publications);
+    });
   }
 
 }
