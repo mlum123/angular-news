@@ -8,12 +8,15 @@ import { TopHeadlineService } from '../../services/top-headline.service';
   styleUrls: ['./top-headlines.component.css']
 })
 export class TopHeadlinesComponent implements OnInit {
-  topHeadlines:TopHeadlines[];
+  topHeadlines:TopHeadlines;
 
   constructor(private topHeadlineService: TopHeadlineService) { }
 
   ngOnInit(): void {
-    this.topHeadlines = this.topHeadlineService.getTopHeadlines();
+    this.topHeadlineService.getTopHeadlines().subscribe(topHeadlines => {
+      this.topHeadlines = topHeadlines;
+      console.log(topHeadlines);
+    });
   }
 
 }
