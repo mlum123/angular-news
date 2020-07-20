@@ -2,8 +2,7 @@
 <div class="wrapper">
     <div *ngFor="let topHeadline of publications.sources" class="card">
         <div class="container">
-            <!-- TODO: Make URL work -->
-            <h4> <a (routerLink)="topHeadline.url"> {{ topHeadline.name }}</a></h4>
+            <h4> <a (click)="onClick(topHeadline)"> {{ topHeadline.name }}</a></h4>
             <!-- <li> {{ topHeadline.source.name }} </li> -->
             <p> {{ topHeadline.description }} </p>
         </div>

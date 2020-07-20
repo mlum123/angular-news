@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PublicationService } from '../../services/publication.service';
 import { Publications } from '../../models/Publications';
+import { ExternalLinkService } from '../../services/external-link.service';
 
 @Component({
   selector: 'app-publications',
@@ -10,12 +11,16 @@ import { Publications } from '../../models/Publications';
 export class PublicationsComponent implements OnInit {
   publications:Publications;
 
-  constructor(private publicationService:PublicationService) { }
+  constructor(private publicationService:PublicationService, private externalLinkService: ExternalLinkService) { }
 
   ngOnInit(): void {
     this.publicationService.getPublications().subscribe(publications => {
       this.publications = publications;
     });
+  }
+
+  onClick(topHeadline) {
+    this.externalLinkService.visitExternalLink(topHeadline);
   }
 
 }
