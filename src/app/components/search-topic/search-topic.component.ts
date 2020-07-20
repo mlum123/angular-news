@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TopHeadlines } from '../../models/TopHeadlines';
 import { SearchTopicService } from '../../services/search-topic.service';
+import { ExternalLinkService } from '../../services/external-link.service';
 
 @Component({
   selector: 'app-search-topic',
@@ -11,7 +12,7 @@ export class SearchTopicComponent implements OnInit {
   keyword: string;
   keywordArticles:TopHeadlines = new TopHeadlines();
 
-  constructor(private searchTopicService: SearchTopicService) { }
+  constructor(private searchTopicService: SearchTopicService, private externalLinkService: ExternalLinkService) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +21,10 @@ export class SearchTopicComponent implements OnInit {
     this.searchTopicService.getKeywordArticles(keyword).subscribe(keywordArticles => {
       this.keywordArticles = keywordArticles;
     });
+  }
+
+  onClick(topHeadline) {
+    this.externalLinkService.visitExternalLink(topHeadline);
   }
 
 }

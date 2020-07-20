@@ -4,12 +4,16 @@
     placeholder="Search for an article topic..." class="text">
     <input type="submit" value="Submit" class="btn">
 </form>
-<ul *ngFor="let topHeadline of keywordArticles.articles">
-    <!-- TODO: Make URL work -->
-    <li> <a (routerLink)="topHeadline.url"> {{ topHeadline.title }} </a></li>
-    <ul>
-        <!-- <li> {{ topHeadline.source.name }} </li> -->
-        <li> {{ topHeadline.author }} </li>
-        <li> {{ topHeadline.description }} </li>
-    </ul>
-</ul>
+<div>
+    <div *ngFor="let topHeadline of keywordArticles.articles; let i = index" class="item card">
+        <div class="number">
+            <h2>{{ i + 1}} </h2>
+        </div>
+        <div class="container">
+            <a (click)="onClick(topHeadline)"> {{ topHeadline.title }} </a>
+            <!-- <li> {{ topHeadline.source.name }} </li> -->
+            <p class="author"> {{ topHeadline.author }} </p>
+            <p class="description"> {{ topHeadline.description }} </p>
+        </div>
+    </div>
+</div>
