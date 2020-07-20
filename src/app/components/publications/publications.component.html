@@ -1,9 +1,11 @@
 <h1>Research Publications</h1>
-<div *ngFor="let topHeadline of publications.sources" class="card">
-    <div class="container">
-        <!-- TODO: Make URL work -->
-        <h4> <a (routerLink)="topHeadline.url"> {{ topHeadline.name }}</a></h4>
-        <!-- <li> {{ topHeadline.source.name }} </li> -->
-        <p> {{ topHeadline.description }} </p>
+<div class="wrapper">
+    <div *ngFor="let topHeadline of publications.sources" class="card">
+        <div class="container">
+            <!-- TODO: Make URL work -->
+            <h4> <a (routerLink)="topHeadline.url"> {{ topHeadline.name }}</a></h4>
+            <!-- <li> {{ topHeadline.source.name }} </li> -->
+            <p> {{ topHeadline.description }} </p>
+        </div>
     </div>
 </div>

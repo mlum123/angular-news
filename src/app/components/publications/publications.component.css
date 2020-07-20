@@ -1,3 +1,9 @@
+/* wrapper is used for making all the publication tiles the same height */
+.wrapper {
+    flex-direction: row;
+    display: row;
+}
+
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -5,6 +11,8 @@
     width: 300px;
     display: inline-block;
     margin: 10px;
+    vertical-align: top;
+    height: 200px;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -15,6 +23,10 @@
 /* Add some padding inside the card container */
 .container {
     padding: 2px 16px;
+}
+
+a {
+    font-size: 20px;
 }
 
 a:hover,

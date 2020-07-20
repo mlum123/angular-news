@@ -6,14 +6,21 @@
     width: 1000px;
 }
 
+a {
+    font-size: 20px;
+}
+
 a:hover,
 a:visited {
     text-decoration: underline;
 }
 
+.author {
+    font-style: italic;
+}
+
 .number {
     margin-right: 40px;
-    vertical-align: center;
     opacity: 80%;
     font-size: 25px;
 }
