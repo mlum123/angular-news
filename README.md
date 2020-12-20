@@ -1,5 +1,11 @@
 # AngularNews
 
+This is a News Aggregator web application that uses Angular and the News API to display automatically updated top headlines to users.
+It also allows users to search for articles by topic, and to research and vet publications.
+
+## Technologies Used
+Angular, TypeScript, HTML, CSS, News API
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 
 ## Development server
